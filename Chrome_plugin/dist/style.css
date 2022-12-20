@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa&display=swap");
+html, body {
+  padding: 0;
+  margin: 0;
+  color: #c0c0cf;
+  width: 400px;
+  height: 200px;
+  font-family: -apple-system, 'Comfortaa', sans-serif; }
+
+body {
+  background-color: #40404f;
+  padding: 1em;
+  box-sizing: border-box;
+  min-height: 100vh;
+  position: relative; }
+
+#conversation {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  padding: .5em;
+  background-color: #4b4b5d;
+  border: solid 1pt #292933;
+  border-radius: 4px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+  #conversation::-webkit-scrollbar {
+    width: 12px; }
+  #conversation::-webkit-scrollbar-track {
+    border-left: solid 1pt #292933;
+    width: 12px;
+    padding: 2px; }
+  #conversation::-webkit-scrollbar-thumb {
+    height: auto;
+    background-color: #292933; }
+  #conversation::-webkit-scrollbar-button {
+    display: none; }
+  #conversation .line {
+    display: block;
+    margin: 4px 0; }
+    #conversation.line.response {
+      text-align: right; }
+    #conversation.line.request {
+      text-align: left; }
+    #conversation.line.message {
+      display: inline-block;
+      box-sizing: border-box;
+      padding: .25em;
+      background-color: #57576b;
+      border: solid 1px #292933;
+      border-radius: 4px;
+      max-width: 60%; }
+      #conversation.line.message.error {
+        border-color: #ff4060; }
+
+input, button {
+  padding: .5em;
+  background: linear-gradient(to bottom, #4b4b5d 0%, #626279 100%);
+  color: #c0c0cf;
+  border-width: 1pt;
+  border-style: solid;
+  border-color: #292933;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: 2px 0; }
+  input:disabled, button:disabled {
+    opacity: .5; }
+  input:focus, button:focus {
+    outline: none;
+    border-color: #ff8000; }
+  input[type=submit], input[type=button], button[type=submit], button[type=button] {
+    background: linear-gradient(to bottom, #626279 0%, #4b4b5d 100%);
+    transition: filter .2s ease; }
+    input[type=submit]:hover, input[type=button]:hover, button[type=submit]:hover, button[type=button]:hover {
+      filter: brightness(110%); }
+
+.flex {
+  display: flex; }
+  .flex.row {
+    flex-direction: row; }
+    .flex.row.reverse {
+      flex-direction: row-reverse; }
+  .flex.col {
+    flex-direction: column; }
+    .flex.col.reverse {
+      flex-direction: column-reverse; }
+    .flex.col .item {
+      width: 100%; }
+  .flex .item {
+    flex: 0 1 0; }
+    .flex .item.stretch {
+      flex: 1 1 0; }
+    .flex .item.start {
+      align-self: flex-start; }
+    .flex .item.center {
+      align-self: center; }
+    .flex .item.end {
+      align-self: flex-end; }
+
+.fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: .5em .5em; }

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <link href="/dist/style.css" rel="stylesheet">
+ </head>
+ <body>
+  <div class="flex col fill">
+    <div id="conversation" class="item stretch">
+        <div class="line request">
+        </div>
+    </div>
+    <form id="chatform" name="chatform"
+    class="item end flex row">
+      <input type="text" class="item start stretch" name="message" id="message" placeholder="Ask me a question!">
+      <input type="hidden" name="page_url" id="page_url"/>
+    </form>
+  </div>
+  <script src="popup.js"></script>
+ </body>
+</html>

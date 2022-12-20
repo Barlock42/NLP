@@ -1,0 +1,26 @@
+{
+  "name": "KSReader",
+  "version": "1.0",
+  "description": "Let it read for you.",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "background": {
+    "scripts": ["KSReader.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/lambda16.png",
+      "32": "images/lambda32.png",
+      "64": "images/lambda64.png",
+      "128": "images/lambda128.png"
+    }
+  },
+  "icons": {
+    "16": "images/lambda16.png",
+    "32": "images/lambda32.png",
+    "64": "images/lambda64.png",
+    "128": "images/lambda128.png"
+  },
+  "manifest_version": 2
+}
